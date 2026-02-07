@@ -109,20 +109,6 @@ def main():
     key_path = os.path.join(keys_directory, "Claveprivada_FIEL_XOJI740919U48_20230118_122738.key")
     
     print("=== Using Generated Keys ===")
-    # Generate a key pair for demonstration
-    generate_key_pair()
-    private_key, public_key = generate_key_pair()
-    message = b"hello"
-    print("--------------------------Encrypting------------------------")
-    encrypted_message = encrypt(message, public_key)
-    print("--------------------Signing--------------------------------")
-    signature = sign(message, private_key)
-    print(f"Encrypted text: {encrypted_message.hex()}, and signature: {signature.hex()}")
-    print("--------------------Verifying signature----------------------")
-    verified = verify(signature, message, public_key)
-    print(verified)
-    decrypted_message = decrypt(encrypted_message, private_key)
-    print(decrypted_message)
     
     print("\n=== Loading External Keys ===")
     # Load certificate and private key from files
