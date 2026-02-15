@@ -26,4 +26,4 @@ jobs:
 
         # running tests
         - name: Run tests
-          run: python program.py 
+          run: python3 program.py  --cert "keys/xoji740919u48.cer" --key "keys/xoji740919u48.key" --password 12345678a 
